@@ -3,14 +3,6 @@
     Private bFinDeOperacion As Boolean = False
     Public cProcesador As Procesador = New Procesador()
 
-    Private Sub FrmCalc_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        GroupBox1.Visible = False
-    End Sub
-
-    Private Sub FrmCalc_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
-
-    End Sub
-
     Private Sub FrmCalc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
         Debug.WriteLine(e.KeyChar)
         Procesar(e)
@@ -96,10 +88,10 @@
             Dim TempCad As String = ""
             If lblOperacion.Text <> "" Then
                 TempCad = lblOperacion.Text.Substring(lblOperacion.Text.Length - 2, 1)
-            End If
 
-            If "+-*/".Contains(TempCad) And cProcesador.ValorTotal = Convert.ToDouble(lblNumeros.Text) Then
-                lblOperacion.Text = lblOperacion.Text.Substring(0, lblOperacion.Text.Length - 3) + operador
+                If "+-*/".Contains(TempCad) And cProcesador.ValorTotal = Convert.ToDouble(lblNumeros.Text) Then
+                    lblOperacion.Text = lblOperacion.Text.Substring(0, lblOperacion.Text.Length - 3) + operador
+                End If
             Else
                 bOperar = True
                 lblOperacion.Text += lblNumeros.Text + operador
@@ -108,7 +100,7 @@
             Return bOperar
         Else
             lblOperacion.Text = ""
-
+            bFinDeOperacion = False
             Return True
         End If
 

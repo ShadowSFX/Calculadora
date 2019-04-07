@@ -21,3 +21,15 @@ C:\Users\Hikaros\Desktop\Calculadora WF\Calculadora WF\obj\Debug\Calculadora WF.
 C:\Users\Hikaros\Desktop\Calculadora WF\Calculadora WF\obj\Debug\Calculadora WF.exe
 C:\Users\Hikaros\Desktop\Calculadora WF\Calculadora WF\obj\Debug\Calculadora WF.xml
 C:\Users\Hikaros\Desktop\Calculadora WF\Calculadora WF\obj\Debug\Calculadora WF.pdb
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\obj\Debug\Calculadora WF.vbprojResolveAssemblyReference.cache
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\obj\Debug\Calculadora_WF.FrmCalc.resources
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\obj\Debug\Calculadora_WF.Resources.resources
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\obj\Debug\Calculadora WF.vbproj.GenerateResource.Cache
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\obj\Debug\Calculadora WF.vbproj.CoreCompileInputs.cache
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\obj\Debug\Calculadora WF.exe
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\obj\Debug\Calculadora WF.xml
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\obj\Debug\Calculadora WF.pdb
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\bin\Debug\Calculadora WF.exe.config
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\bin\Debug\Calculadora WF.exe
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\bin\Debug\Calculadora WF.pdb
+C:\Users\Hikaros\Desktop\POO\Calculadora WF\Calculadora WF\bin\Debug\Calculadora WF.xml
