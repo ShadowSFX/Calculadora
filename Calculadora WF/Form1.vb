@@ -1,24 +1,26 @@
 ﻿Public Class FrmCalc
 
     Private bFinDeOperacion As Boolean = False
+    Private bPrimeraPresion As Boolean = True
     Private sPenultimoOperador As String = ""
-    Private cProcesador As Procesador = New Procesador()
     Private sFiltro As String = "abcdefghijklmnopqrstuvwxyz<>,:;'[]{}|~!@#$%^&*()?¡²³¤€¼½¾‘’¥×`'QWERTYUIOPASDFGHJKLZXCVBNM"
-
+    Private cProcesador As Procesador = New Procesador()
 
     Private Sub FrmCalc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
         If sFiltro.Contains(e.KeyChar) Then
             Return
         End If
 
-        Debug.WriteLine(e.KeyChar)
         Procesar(e)
     End Sub
 
     Private Sub Procesar(e As KeyPressEventArgs)
         Try
-            If Asc(e.KeyChar) = 8 Then
-                lblNumeros.Text = lblNumeros.Text.Substring(0, lblNumeros.Text.Length - 1)
+            If Asc(e.KeyChar) = 8 Then 'backspace
+                If lblNumeros.Text <> "" Then
+                    lblNumeros.Text = lblNumeros.Text.Substring(0, lblNumeros.Text.Length - 1)
+                End If
+
             ElseIf Asc(e.KeyChar) = 45 Then
                 If AgregarOperador(" - ") Then
                     MandarOperacion(sPenultimoOperador)
@@ -43,7 +45,7 @@
                     sPenultimoOperador = "/"
                 End If
 
-            ElseIf Asc(e.KeyChar) = 13 Then
+            ElseIf Asc(e.KeyChar) = 13 Then 'enter
                 If sPenultimoOperador = "" Then
                     Return
                 End If
@@ -53,6 +55,7 @@
                 cProcesador.ValorTotal = 0
                 sPenultimoOperador = ""
                 lblOperacion.Text = ""
+                bPrimeraPresion = True
             Else
                 Select Case e.KeyChar
                     Case Convert.ToChar(Keys.Escape)
@@ -60,12 +63,14 @@
                         lblNumeros.Text = ""
                         cProcesador.ValorTotal = 0
                         sPenultimoOperador = ""
+                        bPrimeraPresion = True
                     Case Else
                         If lblNumeros.Text <> "" Then
-                            If Convert.ToDouble(lblNumeros.Text) = cProcesador.ValorTotal Then
+                            If Convert.ToDouble(lblNumeros.Text) = cProcesador.ValorTotal Or bPrimeraPresion Then
+                                bPrimeraPresion = False
                                 lblNumeros.Text = e.KeyChar
                             Else
-                                If lblNumeros.Text.Contains(e.KeyChar) Then
+                                If lblNumeros.Text.Contains(e.KeyChar) And e.KeyChar = "." Then
                                     Return
                                 End If
                                 lblNumeros.Text += e.KeyChar
