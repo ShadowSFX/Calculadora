@@ -35,6 +35,7 @@ Partial Class FrmCalc
         Me.lblNumeros.Name = "lblNumeros"
         Me.lblNumeros.Size = New System.Drawing.Size(225, 23)
         Me.lblNumeros.TabIndex = 0
+        Me.lblNumeros.Text = "0"
         Me.lblNumeros.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Panel1
